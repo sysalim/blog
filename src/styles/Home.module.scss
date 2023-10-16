@@ -1,0 +1,38 @@
+.home {
+  .imageCard {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 80px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 32px;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 764px) {
+  .imageCard {
+    width: 90%;
+  }
+
+  .container {
+    padding: 8px;
+  }
+}

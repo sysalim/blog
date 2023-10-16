@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth
+}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+.inner-wrapper {
+  max-width: 1992px;
+  max-height: 5000px;
+  height: auto;
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1218px;
+  margin: 0 auto;
+  height: auto;
+  overflow: auto;
+}
+
+main {
+  width: 100%;
+  margin: 50px auto;
+  background-color: #FFFFFF;
+}
