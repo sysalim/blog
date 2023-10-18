@@ -44,8 +44,23 @@
   }
 }
 
+@media (max-width: 964px) {
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cardContent {
+      width: 80%;
+    }
+  }
+}
 @media (max-width: 764px) {
-  .cardContent {
-    width: 80%;
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cardContent {
+      width: 70%;
+    }
   }
 }

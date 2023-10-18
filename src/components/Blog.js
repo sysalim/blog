@@ -17,8 +17,9 @@ const BlogPage = () => {
         {load ? (
           <p>loading...</p>
         ) : (
-          data.map((value) => (
+          data.map((value ,index) => (
             <CardContent
+            key={index}
               pathImage={value.image}
               heading={value.heading}
               categori={value.categori}
