@@ -10,7 +10,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 16px;
     height: auto;
     margin-top: 10px;
@@ -19,28 +18,60 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     img {
-      max-width: 360px;
-      max-height: 260px;
       width: 100%;
+      height: 200px;
     }
 
     p {
+      font-family: "work sans";
       color: #4B6BFB;
       font-size: 18px;
       line-height: 20px;
       font-weight: bold;
+      margin-left: 10px;
     }
 
     h2 {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 24px;
-      font-family: serif;
+      font-family: "work sans";
+    }
+    span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      img {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #fff;
+      }
+
+      p {
+        font-size: 16px;
+        color: #97989F;
+        font-weight: 400;
+        font-family: "work sans";
+        line-height: 24px;
+      }
+
+      time {
+        font-family: "work sans";
+        font-size: 16px;
+        color: #97989F;
+      }
     }
   }
 
   .cardContent:hover {
     transform: translateY(-10px);
     transition: 0.1s;
+    img {
+      transform: scale(0.9);
+      transition: 0.5s;
+    }
   }
 }
 
@@ -49,16 +80,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .cardContent {
       width: 80%;
     }
   }
 }
+
 @media (max-width: 764px) {
   .link {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .cardContent {
       width: 70%;
     }

@@ -4,7 +4,7 @@
   height: 100px;
 
   .container {
-    padding: 41px;
+    padding: 31px;
     display: flex;
     align-items: center;
 
@@ -14,7 +14,7 @@
     }
 
     .logo {
-      max-width: 158px;
+      max-width: 170px;
       min-width: 100px;
       padding: 2px;
       width: 100%;
@@ -29,10 +29,11 @@
 
       h1 {
         font-size: 23px;
+        font-weight: 500;
 
         span {
           font-weight: bold;
-          font-family: sans-serif;
+          font-family: "work sans";
         }
       }
     }
@@ -54,7 +55,7 @@
         justify-content: center;
 
         li {
-          font-weight: 900;
+          font-weight: 500;
 
           a {
             font-size: 16px;
@@ -81,6 +82,10 @@
   transition: 1s;
   top: 0;
   z-index: 999;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 764px) {
@@ -127,6 +132,7 @@
       gap: 40px;
 
       .logo {
+        width: 100%;
         transform: scale(1.1);
         transition: 1s;
 
@@ -136,10 +142,10 @@
       }
 
       .navbar {
-        width: 80%;
+        width: 90%;
 
         ul {
-          gap: 10px;
+          gap: 30px;
 
           li {
             font-size: 13px;

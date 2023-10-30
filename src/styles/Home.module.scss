@@ -7,7 +7,7 @@
 
   h1 {
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: "work sans";
     margin-bottom: 32px;
   }
 
@@ -22,17 +22,39 @@
 }
 
 @media (max-width: 960px) {
-  .container {
-    padding: 10px;
+  .home {
+    overflow-x: hidden;
+    .imageCard {
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      padding: 10px;
+    }
   }
 }
 
 @media (max-width: 764px) {
-  .imageCard {
-    width: 90%;
-  }
+  .home {
+    padding: 10px;
 
-  .container {
-    padding: 8px;
+    .imageCard {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    h1 {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 8px;
+    }
   }
 }

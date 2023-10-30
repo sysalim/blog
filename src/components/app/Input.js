@@ -1,5 +1,5 @@
 import style from "../../styles/app/Input.module.scss";
-const Input = ({ placeholder, name, id }) => {
+const Input = ({ placeholder, name, id, change, keyup }) => {
   return (
     <>
       <input
@@ -8,6 +8,8 @@ const Input = ({ placeholder, name, id }) => {
         placeholder={placeholder}
         id={id}
         name={name}
+        onChange={change}
+        onKeyUp={keyup}
       />
     </>
   );

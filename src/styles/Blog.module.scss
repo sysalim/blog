@@ -1,12 +1,18 @@
-.container::-webkit-scrollbar {
-  display: none;
-}
-.container {
-  flex-wrap: wrap;
-  overflow: hidden;
+.blog {
   width: 100%;
-  height: auto;
-  gap: 15px;
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    font-family: "work sans";
+    font-weight: bold;
+  }
+  .container {
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    gap: 15px;
+  }
 }
 
 @media (max-width: 960px) {

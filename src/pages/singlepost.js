@@ -1,12 +1,11 @@
 const { useState } = require("react");
-
 const singlePost = () => {
   const [file, setFile] = useState(null);
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData();
     data.append("file", file);
-    fetch("http://localhost:3000/api/post", {
+    fetch("http://localhost:300/blog/create", {
       method: "POST",
       body: data,
     });

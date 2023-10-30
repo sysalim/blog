@@ -1,4 +1,10 @@
 import Head from "next/head";
+/**
+ * 
+ * @param {string} param0 
+ * @returns {component}
+ * @author sayyid salim <mohsalim951@gmail.com>
+ */
 const HeadComponents = ({ title, description, image ,url}) => {
   return (
     <Head>
