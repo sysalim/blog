@@ -1,0 +1,17 @@
+.customFileInput {
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.customFileInput:hover {
+  background-color: #45a049;
+}
+
+.customFileInput:active {
+  background-color: #3e8e41;
+}

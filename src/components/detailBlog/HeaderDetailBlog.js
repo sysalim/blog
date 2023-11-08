@@ -12,11 +12,11 @@ const HeaderDetailBlog = ({
       <button>{categori}</button>
       <h1>{heading}</h1>
       <span>
-        <img src={__dirname + imageUser} alt="gambar user" />
+        <img src={imageUser} alt="gambar user" />
         <p>{userName}</p>
         <time dateTime={dateTime}>{dateTime}</time>
       </span>
-      <img src={__dirname + imageContent} alt="gambar content" />
+      <img src={imageContent} alt="gambar content" />
     </div>
   );
 };

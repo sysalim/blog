@@ -1,23 +1,24 @@
-const { useState } = require("react");
+import HeadComponents from "@/components/Head";
+import SinglePost from "@/components/SinglePost";
+import useLocalStorage from "@/hooks/use-storage";
+import { useRouter } from "next/router";
+const { useEffect } = require("react");
 const singlePost = () => {
-  const [file, setFile] = useState(null);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = new FormData();
-    data.append("file", file);
-    fetch("http://localhost:300/blog/create", {
-      method: "POST",
-      body: data,
-    });
-  };
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
+  const storage = useLocalStorage();
+  const router = useRouter();
+  const title = router.pathname.replace("/", "");
+  useEffect(() => {
+    const item = storage.getItem("session");
+    if (item) {
+      const parseItem = JSON.parse(item);
+      parseItem.login ? "" : router.push("/login");
+    }
+  }, []);
   return (
-    <form method="post" encType="multipart/form-data" onSubmit={handleSubmit}>
-      <input type="file" onChange={handleFileChange} />
-      <button type="submit">kirim</button>
-    </form>
+    <>
+      <HeadComponents title={title} />
+      <SinglePost />
+    </>
   );
 };
 

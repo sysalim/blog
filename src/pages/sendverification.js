@@ -1,15 +1,15 @@
 import HeadComponents from "@/components/Head";
-import Login from "@/components/Login";
+import SendVerification from "@/components/SendVerication";
 import { useRouter } from "next/router";
 
-const login = () => {
+const sendVerification = () => {
   const router = useRouter();
   const title = router.pathname.replace("/", "");
   return (
     <>
       <HeadComponents title={title} />
-      <Login />
+      <SendVerification />
     </>
   );
 };
-export default login;
+export default sendVerification;

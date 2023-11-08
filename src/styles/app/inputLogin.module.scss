@@ -1,0 +1,26 @@
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  border: solid 1px black;
+  margin: 0 auto;
+}
+
+.input:focus {
+  border: solid 1px blue;
+}
+
+.input::placeholder {
+  font-size: 11px;
+  color: darkblue;
+  font-family: sans-serif;
+  font-style: oblique;
+  text-align: center;
+}
+
+@media (max-width: 764px) {
+  .input {
+    width: 90%;
+  }
+}

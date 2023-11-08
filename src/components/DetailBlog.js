@@ -1,20 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import style from "../styles/DeatilBlog.module.scss";
 import HeaderDetailBlog from "./detailBlog/HeaderDetailBlog";
-import { dataDetailBlog } from "@/data/dataBlog";
 import { useRouter } from "next/router";
 import { loading } from "@/data/dataHome";
 const DetailBlog = () => {
   const router = useRouter();
   const [load, setLoad] = useState(true);
   const [data, setData] = useState(null);
+  const pathImage = "http://localhost:300/image/";
   const { id } = router.query;
   useEffect(() => {
-    if (id) {
-      const foundData = dataDetailBlog.find((item) => item.id === parseInt(id));
-      setData(foundData);
-      setLoad(false);
-    }
+    const getData = async () => {
+      if (id) {
+        const response = await fetch(
+          "http://localhost:300/blog/current/id/" + id
+        );
+        const responseData = await response.json();
+        if (response.ok && responseData.data) {
+          setData(responseData.data);
+          setLoad(false);
+          console.log(responseData.data);
+        }
+      }
+    };
+    getData();
     console.log(data);
   }, [id]);
   return (
@@ -24,14 +33,17 @@ const DetailBlog = () => {
       ) : (
         <>
           <HeaderDetailBlog
-            categori={data.categori}
+            categori={data.categori.categori}
             heading={data.title}
-            imageUser={"Union.png"}
+            imageUser={pathImage + data.image}
             userName={"sayyid salim"}
             dateTime={"20 agustus 2020"}
-            imageContent={data.image}
+            imageContent={pathImage + data.image}
           />
-          <div className={style.content}>{data.content}</div>
+          <div
+            className={style.content}
+            dangerouslySetInnerHTML={{ __html: data.content }}
+          />
         </>
       )}
     </div>

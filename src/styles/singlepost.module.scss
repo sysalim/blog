@@ -1,0 +1,47 @@
+.singlepost {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .config {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    .option {
+      width: 150px;
+      height: 40px;
+      padding: 5px;
+      color: white;
+      background-color: darkblue;
+      border: none;
+      font-size: 12px;
+      font-weight: 700;
+      font-family: serif;
+    }
+    .message {
+      text-align: center;
+      font-size: 16px;
+      margin: 20px 0;
+      color: green;
+    }
+  }
+
+  .submit {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    color: white;
+    background-color: blueviolet;
+    border: none;
+  }
+}
